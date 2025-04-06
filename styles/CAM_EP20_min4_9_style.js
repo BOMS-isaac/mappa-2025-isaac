@@ -67,7 +67,7 @@ var style_CAM_EP20_min4_9 = function(feature, resolution){
 		];
 	}
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 10.000000000000005 + size,
+        image: new ol.style.Circle({radius: 10.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(240,16,22,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
