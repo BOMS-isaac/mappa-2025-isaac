@@ -4,7 +4,7 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [633039.645326, 5173644.903318, 1591790.226763, 6062581.989886], maxZoom: 28, minZoom: 1
+         maxZoom: 28, minZoom: 1
     })
 });
 
@@ -824,16 +824,6 @@ if (elementToMove && parentElement) {
 
 
 //geocoder
-
-var geocoder = new Geocoder('nominatim', {
-  provider: 'osm',
-  lang: 'en-US',
-  placeholder: 'Search place or address ...',
-  limit: 5,
-  keepOpen: true,
-});
-map.addControl(geocoder);
-document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 
 //layer search
