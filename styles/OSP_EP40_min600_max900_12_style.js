@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_OSP_EP40_min600_max900osp_csv_12 = function(feature, resolution){
+var style_OSP_EP40_min600_max900_12 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}

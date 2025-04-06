@@ -4,12 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [574334.325879, 4315869.454966, 2502256.809124, 6019053.483974], maxZoom: 28, minZoom: 1
+        extent: [685160.116775, 4325080.160674, 2290274.591638, 6030063.694989], maxZoom: 28, minZoom: 1
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([574334.325879, 4315869.454966, 2502256.809124, 6019053.483974], map.getSize());
+map.getView().fit([685160.116775, 4325080.160674, 2290274.591638, 6030063.694989], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -824,6 +824,16 @@ if (elementToMove && parentElement) {
 
 
 //geocoder
+
+var geocoder = new Geocoder('nominatim', {
+  provider: 'osm',
+  lang: 'en-US',
+  placeholder: 'Search place or address ...',
+  limit: 5,
+  keepOpen: true,
+});
+map.addControl(geocoder);
+document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 
 
 //layer search
